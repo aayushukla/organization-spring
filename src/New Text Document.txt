@@ -1,0 +1,11 @@
+<beans>
+ <bean id="injectSimpleConfig"
+ class="com.apress.prospring5.ch3.xml.InjectSimpleConfig"/>
+ <bean id="injectSimpleSpel"
+ class="com.apress.prospring5.ch3.xml.InjectSimpleSpel"
+ p:name="John Mayer"
+ p:age="39"
+ p:height="1.92"
+ p:programmer="false"
+ p:ageInSeconds="1241401112"/>
+</beans>

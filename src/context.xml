@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ <bean id="injectSimpleConfig"
+ class="com.capgemini.organization.main.Organzation"/>
+ <bean id="injectSimpleSpel"
+ class="com.capgemini.organization.main.Address"
+ p:orgId="100"
+ p:age="39"
+ p:height="1.92"
+ p:programmer="false"
+ p:ageInSeconds="1241401112"/>
+</beans>
