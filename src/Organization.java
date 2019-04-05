@@ -1,152 +1,103 @@
-package com.capgemini.organization.main;
-
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-
-import org.springframework.context.support.GenericXmlApplicationContext;
+package com.capgemini.spring.model;
+import java.util.*;
 
 public class Organization {
-	
-	private int orgId;
-	private String orgName;
+	private int organizationId;
+	private String organizationName;
 	private double marketPrice;
 	private Address address;
 	private List<String> directors;
 	private Set<String> branches;
-	private Map<String, String> branchWiseHead;
+	private Map<String,String> branchWiseHead;
 	private Properties ipAddresses;
 	private Properties databaseDetails;
 	
-	
-	
-	public static void main(String... args) {
-		 GenericXmlApplicationContext ctx =
-		 new GenericXmlApplicationContext();
-		 ctx.load("context.xml");
-		 ctx.refresh();
-		 //InjectSimple simple = (InjectSimple) ctx.getBean("injectSimple");
-		// System.out.println(simple);
-		 ctx.close();
-		 }
-	
-	
-	public int getOrgId() {
-		return orgId;
+	public Organization(int organizationId, String organizationName, double marketPrice, Address address)/*,
+			List<String> directors, Set<String> branches, Map<String,String> branchWiseHead, Properties ipAddresses,
+			Properties databaseDetails)*/ {
+		
+		this.organizationId = organizationId;
+		this.organizationName = organizationName;
+		this.marketPrice = marketPrice;
+		this.address = address;
+		/*this.directors = directors;
+		this.branches = branches;
+		this.branchWiseHead = branchWiseHead;
+		this.ipAddresses = ipAddresses;
+		this.databaseDetails = databaseDetails;*/
 	}
 
-
-
-	public void setOrgId(int orgId) {
-		this.orgId = orgId;
+	public int getOrganizationId() {
+		return organizationId;
 	}
 
-
-
-	public String getOrgName() {
-		return orgName;
+	public void setOrganizationId(int organizationId) {
+		this.organizationId = organizationId;
 	}
 
-
-
-	public void setOrgName(String orgName) {
-		this.orgName = orgName;
+	public String getOrganizationName() {
+		return organizationName;
 	}
 
-
+	public void setOrganizationName(String organizationName) {
+		this.organizationName = organizationName;
+	}
 
 	public double getMarketPrice() {
 		return marketPrice;
 	}
 
-
-
 	public void setMarketPrice(double marketPrice) {
 		this.marketPrice = marketPrice;
 	}
-
-
 
 	public Address getAddress() {
 		return address;
 	}
 
-
-
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-
-
 
 	public List<String> getDirectors() {
 		return directors;
 	}
 
-
-
 	public void setDirectors(List<String> directors) {
 		this.directors = directors;
 	}
-
-
 
 	public Set<String> getBranches() {
 		return branches;
 	}
 
-
-
 	public void setBranches(Set<String> branches) {
 		this.branches = branches;
 	}
-
-
 
 	public Map<String, String> getBranchWiseHead() {
 		return branchWiseHead;
 	}
 
-
-
 	public void setBranchWiseHead(Map<String, String> branchWiseHead) {
 		this.branchWiseHead = branchWiseHead;
 	}
-
-
 
 	public Properties getIpAddresses() {
 		return ipAddresses;
 	}
 
-
-
 	public void setIpAddresses(Properties ipAddresses) {
 		this.ipAddresses = ipAddresses;
 	}
-
-
 
 	public Properties getDatabaseDetails() {
 		return databaseDetails;
 	}
 
-
-
 	public void setDatabaseDetails(Properties databaseDetails) {
 		this.databaseDetails = databaseDetails;
 	}
-
-	@Override
-	public String toString() {
-		return "Organization [orgId=" + orgId + ", orgName=" + orgName + ", marketPrice=" + marketPrice + ", address="
-				+ address + ", directors=" + directors + ", branches=" + branches + ", branchWiseHead=" + branchWiseHead
-				+ ", ipAddresses=" + ipAddresses + ", databaseDetails=" + databaseDetails + "]";
-		
-		
-	}
 	
 	
-
 }
